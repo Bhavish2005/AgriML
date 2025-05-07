@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;600&display=swap');
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    text-align: center;
+    background-color: #81d87f;
+    color: #17481a;
+    padding: 20px;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.guide {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #17481a;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+}
+
