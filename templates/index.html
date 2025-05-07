@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriML</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <header>
+        <h1>AgriML: Smarter Crop Planning & Fertilizer Guidance</h1>
+    </header>
+    <div class="main-container horizontal-wrapper">
+        <div class="need-section">
+            <h2>Why AgriML Matters for Farmers</h2>
+            <p>AgriML is an AI-powered farming assistant that empowers farmers with <br>data-driven decisions for better productivity and sustainable agriculture. <br>Our platform tackles key farming challenges through smart predictions and recommendations.</p>
+
+            
+            <p>AgriML reduces guesswork, maximizes crop output, and supports <br>sustainable resource usage helping farmers thrive in changing climates.</p>
+        </div>
+        <div class="image-section">
+            <img src="{{ url_for('static', filename='Farming-Vector-Illustration.jpg') }}" alt="Crop Illustration">
+        </div>
+    </div>
+    <div class="needed-section">
+        
+        <h2>AgriML offers a suite of features designed to help farmers make informed decisions:</h2>
+        <ul style="list-style-type: none; padding-left: 0;">
+        <li><strong>Choose the Right Crop:</strong> Get intelligent crop suggestions based on your soil, temperature, rainfall, and other conditions.</li>
+        <li><strong>Boost Yield Accuracy:</strong> Predict crop yield before planting using environmental and historical data.</li>
+        <li><strong>Smart Fertilizer Advice:</strong> Receive personalized fertilizer recommendations based on soil nutrients and crop type.</li>
+        <li><strong>Step-by-Step Measurement Guide:</strong> Learn how to measure rainfall, soil pH, NPK, and other inputs for accurate predictions with our <a href="/guide" class="inline-guide-link">Interactive guide</a>.</li>
+
+    </ul></div>
+    
+    
+    
+    
+    <section class="section-divider">
+        <h2> Crop Recommendation</h2>
+    </section>
+   
+    
+    <form action="/recommend" method="POST" >
+        <div class="form-container">
+        <div class="form-left">
+            <label for="N">Nitrogen:</label>
+            <input type="number" id="N" name="N"  step="0.01" required>
+    
+            <label for="P">Phosphorous:</label>
+            <input type="number" id="P" name="P"  step="0.01" required>
+    
+            <label for="K">Potassium:</label>
+            <input type="number" id="K" name="K"  step="0.01" required>
+        </div>
+    
+        <div class="form-right">
+            <label for="temperature"> Temperature (°C):</label>
+            <input type="number" id="temperature" name="temperature" step="0.01" required>
+    
+            <label for="humidity">Humidity:</label>
+            <input type="text" id="humidity" name="humidity" step="0.01" required>
+    
+            <label for="ph"> Soil PH Level:</label>
+            <input type="number" id="ph" name="ph"  step="0.01" required>
+        </div>
+        
+    </div><div class="Lastinput">
+            <label for="rainfall">Rainfall:</label>
+            <input type="number" id="rainfall" name="rainfall" step="0.01" required>
+        </div>
+        <div class="button_div"><button type="submit">Submit </button></div>
+    
+        
+    </form>
+    {% if recommended_crop is not none %}
+    <div class="prediction-box">
+        <h2>Recommended  Crop  : {{ recommended_crop }} </h2>
+    </div>
+    {% endif %}
+    <section class="section-divider">
+        <h2> Crop Yield Prediction</h2>
+    </section>
+    <form action="/predict" method="POST" >
+        <div class="form-container">
+        <div class="form-left">
+            <!-- <label for="Year">Year:</label>
+            <input type="number" id="Year" name="Year" required> -->
+    
+            <label for="average_rain_fall_mm_per_year">Average Rainfall (mm):</label>
+            <input type="number" id="average_rain_fall_mm_per_year" name="average_rain_fall_mm_per_year" required>
+    
+            <label for="pesticides_tonnes">Pesticides Used (Tonnes):</label>
+            <input type="number" id="pesticides_tonnes" name="pesticides_tonnes" required>
+        </div>
+    
+        <div class="form-right">
+            <label for="avg_temp">Average Temperature (°C):</label>
+            <input type="number" id="avg_temp" name="avg_temp" step="0.01" required>
+    
+            <label for="Area">Area:</label>
+            <input type="text" id="Area" name="Area" required>
+    
+           
+        </div>
+        
+    </div>
+    <div class="bottom_center">
+            <label for="Item">Crop Name:</label>
+            <input type="text" id="Item" name="Item" required>
+        </div>
+        <div class="button_div"><button type="submit">Submit</button></div>
+    
+        
+    </form>
+    {% if prediction is not none %}
+    <div class="prediction-box">
+        <h2>Predicted Crop Yield: {{ prediction }} hg/ha</h2>
+    </div>
+    {% endif %}
+   
+    
+    <section class="section-divider">
+        <h2> Fertilizer Recommendation</h2>
+    </section>
+    <form action="/fertilizer" method="POST">
+        
+        <div class="form-container">
+        
+        <div class="form-left">
+        <label for="temperature">Temperature:</label>
+        <input type="number" name="temperature" required><br>
+        <label for="humidity">Humidity:</label>
+        <input type="number" name="humidity" required><br>
+        <label for="moisture">Moisture:</label>
+        <input type="number" name="moisture" required><br>
+        <label for="soil_type">Soil Type:</label>
+        <input type="text" name="soil_type" required><br>
+        </div>
+        <div class="form-right">
+        <label for="crop_type">Crop Type:</label>
+        <input type="text" name="crop_type" required><br>
+    
+        <label for="N">Nitrogen (N):</label>
+        <input type="number" name="N" required><br>
+    
+        <label for="P">Phosphorus (P):</label>
+        <input type="number" name="P" required><br>
+    
+        <label for="K">Potassium (K):</label>
+        <input type="number" name="K" required><br>
+        </div>
+        </div>
+        <div class="button_div"><button type="submit">Submit</button></div>  
+       
+    </form>
+    
+    <!-- {% if fertilizer_name %}
+        <p><strong> Recommended Fertilizer:</strong> {{ fertilizer_name }}</p>
+    {% endif %} -->
+    {% if fertilizer_name is not none %}
+    <div class="prediction-box">
+        <h2>Recommended  Fertilizer : {{ fertilizer_name }} </h2>
+    </div>
+    {% endif %}
+    
+    <footer>
+        <div class="footer-container">
+            <h2>Contact Us</h2>
+            <p>If you're facing any issues with the predictions or recommendations, feel free to reach out to us.</p>
+            <div class="contact-details">
+                <p><strong>Email:</strong> <a href="mailto:bhavish.pushkarna2005@gmail.com">bhavish.pushkarna2005@gmail.com</a></p>
+                <p><strong>Phone:</strong> +91-81980-44848 , +91-87087-88914 </p>
+                <p><strong>Address:</strong>Hostel Amritam,Thapar Institute of Engineering and Technology,Patiala</p>
+            </div>
+            <p>Follow us on:  
+                <a href="https://twitter.com" target="_blank">Twitter</a> |  
+                <a href="https://facebook.com" target="_blank">Facebook</a> |  
+                <a href="https://instagram.com" target="_blank">Instagram</a>  
+            </p>
+        </div>
+    </footer>
+    
+</body>
+</html>

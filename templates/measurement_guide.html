@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil & Weather Measurement Guide</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_new.css') }}">
+</head>
+<body>
+    <header>
+        <h1> Soil & Weather Measurement Guide</h1>
+        <p>Learn how to measure soil nutrients, pH, moisture, Soil Type, and rainfall accurately for better crop planning.</p>
+    </header>
+
+    <section class="guide-grid">
+        <div class="guide">
+            <h2>How to Collect Input Data?</h2>
+            <ul>
+                <li><strong>Average Rainfall (mm/year):</strong><br>Check rainfall data for your location:<br>
+                    <a href="https://www.worldweatheronline.com/" target="_blank">World Weather Online</a>,
+                    <a href="https://www.accuweather.com/" target="_blank">AccuWeather</a>
+                </li>
+                <li><strong>Pesticides Used (Tonnes):</strong><br>Check pesticide usage in your region:<br>
+                    <a href="https://agricultureguruji.com/pesticide-calculator/" target="_blank">Pesticide Calculator</a>,
+                    <a href="https://farmer.gov.in/" target="_blank">Farmer Portal (India)</a>
+                </li>
+                <li><strong>Average Temperature (°C):</strong><br>Find temperature info:<br>
+                    <a href="https://www.timeanddate.com/weather/" target="_blank">Time and Date Weather</a>,
+                    <a href="https://www.weather.com/" target="_blank">Weather Channel</a>
+                </li>
+                <li><strong>Area:</strong> Enter your country name (e.g., India)</li>
+                <li><strong>Crop Name:</strong> Enter the crop you want to grow (e.g., Wheat, Rice, Maize)</li>
+            </ul>
+        </div>
+        
+        <div class="guide">
+            <h2> Nitrogen (N), Phosphorus (P), and Potassium (K)</h2>
+            <p>These nutrients are essential for crop growth. Use soil test kits or lab analysis to determine levels.</p>
+            <h3> How to Measure?</h3>
+            <ul>
+                <li>Use <strong>Soil Test Kits</strong> (Available online or in stores).</li>
+                <li>Send soil samples to a <strong>Soil Testing Lab</strong> for accurate results.</li>
+                <li>Try DIY methods using <strong>color-changing test strips</strong>.</li>
+            </ul>
+            <p> <a href="https://www.nrcs.usda.gov" target="_blank">Find a Soil Testing Lab</a></p>
+        </div>
+
+        <div class="guide">
+            <h2> Measuring Soil pH</h2>
+            <p>pH affects how plants absorb nutrients. Most crops prefer a pH between 6.0 and 7.5.</p>
+            <h3> How to Measure?</h3>
+            <ul>
+                <li>Use a <strong>pH Meter</strong> (Insert probe into moist soil).</li>
+                <li>Test with <strong>pH Strips</strong> (Mix soil with water and dip a strip).</li>
+                <li>DIY Method: Use <strong>vinegar and baking soda</strong> to check acidity/alkalinity.</li>
+            </ul>
+            <p> <a href="https://www.amazon.com/s?k=soil+ph+meter" target="_blank">Buy a pH Meter</a></p>
+        </div>
+
+        <div class="guide">
+            <h2> Measuring Rainfall</h2>
+            <p>Rainfall affects crop yield. Use weather stations or manual rain gauges to track it.</p>
+            <h3> How to Measure?</h3>
+            <ul>
+                <li>Use a <strong>Rain Gauge</strong> (Collect and measure rainwater in mm).</li>
+                <li>Check <strong>weather websites</strong> for accurate data.</li>
+                <li>DIY: Place a straight-sided container in an open area and measure collected rain.</li>
+            </ul>
+            <p> <a href="https://www.accuweather.com/" target="_blank">Check Rainfall Data</a></p>
+        </div>
+        <div class="guide">
+            <h2> Measuring Soil Moisture</h2>
+            <p>Soil moisture affects seed germination and root development. Maintaining optimal moisture is critical for plant health.</p>
+            <h3> How to Measure?</h3>
+            <ul>
+                <li>Use a <strong>Soil Moisture Sensor</strong> (Electronic probes give real-time data).</li>
+                <li>Try the <strong>Feel and Appearance Method</strong> (Take a soil sample and squeeze it).</li>
+                <li>DIY: Insert a dry wooden stick into the soil for a few hours; check for wet marks.</li>
+            </ul>
+            <p> <a href="https://www.amazon.in/s?k=soil+moisture+meter" target="_blank">Buy Soil Moisture Meters</a></p>
+        </div>
+        
+        <div class="guide">
+            <h2> Identifying Soil Type</h2>
+            <p>The soil type determines water retention, root penetration, and nutrient availability. Common types include sandy, clayey, loamy, and silt.</p>
+            <h3> How to Identify?</h3>
+            <ul>
+                <li><strong>Jar Test:</strong> Mix soil and water in a jar, shake, and let settle. Layers reveal texture.</li>
+                <li><strong>Touch Test:</strong> Rub moist soil between fingers—sandy feels gritty, clayey feels sticky.</li>
+                <li><strong>Color & Structure:</strong> Loamy soil is dark, crumbly; sandy is pale and loose.</li>
+            </ul>
+            <p><a href="https://www.nrcs.usda.gov/resources/guides-and-instructions/soil-survey-manual" target="_blank">Read USDA Soil Guide</a></p>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p> Helping farmers make informed decisions! | <a href="/">Back to Home</a></p>
+    </footer>
+</body>
+</html>
