@@ -1,16 +1,16 @@
 # AgriML
 This repository houses a complete AI-powered agricultural decision support system designed to empower farmers with data-driven insights. The platform integrates:
 
-✅ Crop Recommendation (Classification)
+ Crop Recommendation (Classification)
 Suggests the best-suited crop based on soil nutrients (N, P, K), pH, rainfall, temperature, and humidity.
 
-✅ Crop Yield Prediction (Regression)
+ Crop Yield Prediction (Regression)
 Accurately forecasts expected crop yield using historical data and climate conditions, helping farmers plan ahead.
 
-✅ Fertilizer Recommendation (Rule-Based + ML)
+ Fertilizer Recommendation (Rule-Based + ML)
 Provides tailored fertilizer suggestions aligned with soil tests, crop needs, and FAO guidelines.
 
-🔍 Key Features:
+ Key Features:
 
 Fully trained ML models (Random Forest-based) with high accuracy.
 
@@ -22,16 +22,15 @@ Data sources: Kaggle Datasets + FAO & ICAR agronomic guidelines.
 
 Tech Stack: Python, Scikit-learn, Pandas, Matplotlib, Seaborn.
 
-🚜 Impact:
+ Impact:
 
 This system helps farmers make smarter crop choices, optimize fertilizer use, and plan yield expectations, driving sustainability and profitability in agriculture.
 
-👉 Quick Links:
+ Quick Links:
 
-📊 Crop Dataset: Kaggle Link
+ Crop Dataset: https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset
 
-🌱 Yield Dataset: Kaggle Link
+ Yield Dataset: https://www.kaggle.com/datasets/patelris/crop-yield-prediction-dataset 
 
-🧪 Fertilizer Dataset: Kaggle Link
+ Fertilizer Dataset: https://www.kaggle.com/datasets/gdabhishek/fertilizer-prediction
 
-✨ Future Work: Integration of Crop Disease Detection, Real-time Weather Forecasting, and 24×7 AI Chat Support for farmers.
